@@ -1,53 +1,75 @@
-import React, { useState, useEffect } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Switch, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-
+import { setCurrentUser } from "./redux/User/user.action";
 import { auth, handleUserData } from "./components/firebase/utils";
+import Dashboard from "./pages/Dashboard";
+import Admin from "./pages/Admin";
+import WithAdminAuth from "./Admin/HOC/withAdminAuth";
+import Toolbar from "./components/AdminComponents/toolbar/Toolbar";
+import ProductsPage from "./pages/Productspage";
 
-function App() {
-   const [userIsLogedIn, setUserIsLogedIn] = useState(null);
+function App() {   
+
+   const dispatch = useDispatch()
 
    useEffect(() => {
-      auth.onAuthStateChanged(async user=> {
+      const authListener = auth.onAuthStateChanged(async (user) => {
          if (user) {
-            const userRef = await handleUserData(user)
-            userRef.onSnapshot(snapshot => {
-
-               setUserIsLogedIn({
-                  userIsLogedIn: {
-                     id: snapshot.id,
-                     ...snapshot.data()
-                  }
-               });
-            })
+            const userRef = await handleUserData(user);
+            userRef.onSnapshot((snapshot) => {
+               dispatch(setCurrentUser({
+                  id: snapshot.id,
+                  ...snapshot.data(),
+               }));
+            });
          } else {
-            setUserIsLogedIn(null);
+            dispatch(setCurrentUser(user));
             console.log("user signed out");
          }
       });
-   }, []);
+
+      return () => {
+         authListener();
+      };
+   }, [dispatch]);
 
    return (
       <>
          <GlobalStyles />
+         <Toolbar/>
          <Switch>
-            <Route exact path="/" render={() => <Home userIsLogedIn={userIsLogedIn} />} />
-         </Switch>
-         <Switch>
-            <Route exact path="/register" render={() => <Register />} />
-         </Switch>
-         <Switch>
+            <Route exact path="/" render={() => <Home />} />
             <Route
                exact
-               path="/login"
-               render={() =>userIsLogedIn? <Redirect to="/" /> : <Login userIsLogedIn={userIsLogedIn} />}
+               path="/dashboard"
+               render={() => <Dashboard />}
+            />
+            <Route
+               exact
+               path="/search"
+               render={() => <ProductsPage/>}
+            />
+            <Route
+               exact
+               path="/search/:filterType"
+               render={() => <ProductsPage/>}
+            />
+            <Route
+               exact
+               path="/admin"
+               render={() => 
+               <WithAdminAuth>
+                  <Admin />
+               </WithAdminAuth>
+            }
             />
          </Switch>
       </>
    );
 }
+
 
 export default App;

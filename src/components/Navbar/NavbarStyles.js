@@ -6,25 +6,39 @@ export const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   z-index: 2;
-  padding: 1rem 5rem ;
-
+  padding: 1.5rem 5rem ;
+  
   h1{
     color: black;
     font-weight: 500;
+  }
+
+  .home{
+    display: flex;
+    min-width: 230px;
+    justify-content: space-between;
+  }
+
+  .search{
+    height: 30px;
+    transform: translateY(5px)
   }
 `
 
 export const NavLinks = styled.div`
   text-transform: uppercase;
-  width: 10%;
-  min-width: 130px;
   display: flex;
   justify-content: space-between;
   transform: translateY(10px);
 
+  .lastChild{
+    padding-left: 3rem;
+  }
+
   p{
     color: black;
     font-weight: 500;
+    cursor: pointer;
   }
 
   p:hover{

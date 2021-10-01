@@ -42,12 +42,14 @@ export const handleUserData = async (user, additionalData) => {
    if (!snapshot.exists) {
       const { displayName, email } = user;
       const timestamp = new Date();
+      const userRoles = ['user']
 
       try {
         await userRef.set({
           displayName,
           email,
           createdDate: timestamp,
+          userRoles,
           ...additionalData
         });
       } catch(err){

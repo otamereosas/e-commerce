@@ -1,24 +1,45 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Nav,
-  NavLinks
-} from './NavbarStyles'
-import { signInWithGoogle, signOutFromGoogle } from '../firebase/utils'
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { Nav, NavLinks } from "./NavbarStyles";
+import { signInWithGoogle, signOutFromGoogle } from "../firebase/utils";
+import search from '../../assets/search.png'
 
-const Navbar = (props) => {
-  const { userIsLogedIn } = props;
+const Navbar = () => {
+   const mapState = ({ user }) => ({
+      currentUser: user.currentUser,
+   });
+   const { currentUser } = useSelector(mapState);
 
+   return (
+      <Nav>
+         <div className="home">
+            <Link to="/">
+               <h1>NUEL-STORE</h1>
+            </Link>
+            <Link to="/search">
+               <img src={search} className="search" alt="search"/>
+            </Link>
+         </div>
+         <NavLinks>
+            {currentUser && (
+               <Link to="/dashboard">
+                  <p>{currentUser.displayName}</p>
+               </Link>
+            )}
 
-  return (
-    <Nav>
-      <Link to="/"><h1>NUEL-STORE</h1></Link>
-      <NavLinks>
-        {userIsLogedIn? <p></p>:<Link to="/register"><p>Register</p></Link>}
-        {userIsLogedIn? <Link to="/login"><p onClick={signOutFromGoogle} >Logout</p></Link>:<p onClick={signInWithGoogle}>Login</p>}
-      </NavLinks>
-    </Nav>
-  )
-}
+            {currentUser ? (
+               <p className="lastChild" onClick={signOutFromGoogle}>
+                  Logout
+               </p>
+            ) : (
+               <p className="lastChild" onClick={signInWithGoogle}>
+                  Login
+               </p>
+            )}
+         </NavLinks>
+      </Nav>
+   );
+};
 
 export default Navbar;

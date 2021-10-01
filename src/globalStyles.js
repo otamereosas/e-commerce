@@ -50,6 +50,86 @@ const GlobalStyles = createGlobalStyle`
     color: red;
     font-weight: bolder;
   }
+
+  .admin{
+    display: flex;
+  }
+
+  .formRow {
+  display: inline-block;
+  width: 100%;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  select {
+    display: block;
+    width: auto;
+    float: left;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  input,
+  &.checkoutInput select {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px 5px;
+    margin: 10px auto;
+    border: 1px solid #9e9e9e;
+    outline: none;
+  }
+  .modal{
+    width: 50%;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0.2px 2px gray;
+    padding: 2rem;
+    min-width: 300px;
+  }
+  table{
+    width: 100%;
+    height: auto;
+    color: black;
+    font-weight: bolder;
+    text-transform: capitalize;
+
+    .Adminproduct{
+      padding: 10px;
+    }
+
+    img{
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+    }
+
+    button{
+      background: red
+    }
+  }
+
+  #naira{
+    color: black;
+    text-decoration: line-through;
+  }
+
 `
 
 

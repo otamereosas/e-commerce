@@ -19,7 +19,6 @@ export const ImageWrapper = styled.div`
   img{
     object-fit: cover;
     position: absolute;
-    grid-column: 1/2;
     width: 100%;
     transform: translateY(199px);
   }
