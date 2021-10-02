@@ -8,6 +8,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import FormInput from "../../Forms/FormInput";
 import FormSelect from "../../Forms/FormSelect";
+import { CKEditor } from "ckeditor4-react";
 
 const mapState = ({ productsData }) => ({
    product: productsData.product,
@@ -20,6 +21,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
    const [productCategory, setProductCategory] = useState("mens");
    const [productThumbnail, setProductThumbnail] = useState("");
    const [productPrice, setProductPrice] = useState(0);
+   const [productDesc, setProductDesc] = useState("");
 
    useEffect(() => {
       dispatch(fetchProductsStart());
@@ -30,6 +32,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
       setProductName("");
       setProductThumbnail("");
       setProductPrice(0);
+      setProductDesc("");
    };
 
    const handleSubmit = (e) => {
@@ -41,6 +44,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
             productName,
             productThumbnail,
             productPrice,
+            productDesc,
          })
       );
       resetForm();
@@ -55,7 +59,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
                   <h2>Add a Product</h2>
 
                   <FormSelect
-                     label="Category"
+                     label=""
                      options={[
                         {
                            value: "mens",
@@ -93,6 +97,10 @@ const Modal = ({ hidemodal, toggleModal }) => {
                      handleChange={(e) => setProductPrice(e.target.value)}
                   />
 
+                  <CKEditor
+                     onChange={(evt) => setProductDesc(evt.editor.getData())}
+                  />
+
                   <button>Add Product</button>
                </form>
             </div>
@@ -115,7 +123,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
                                     productCategory,
                                     productThumbnail,
                                     productPrice,
-                                    documentID
+                                    documentID,
                                  } = item;
 
                                  return (
@@ -135,7 +143,11 @@ const Modal = ({ hidemodal, toggleModal }) => {
                                        <td>
                                           <button
                                              onClick={() =>
-                                                dispatch(deleteProductStart(documentID))
+                                                dispatch(
+                                                   deleteProductStart(
+                                                      documentID
+                                                   )
+                                                )
                                              }
                                           >
                                              Delete

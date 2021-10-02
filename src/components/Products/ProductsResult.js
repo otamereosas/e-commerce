@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { fetchProductsStart } from "../../redux/Products/productsAction";
+import { addProduct } from "../../redux/Cart/CartActions";
 import FormSelect from "../Forms/FormSelect";
 import { Main, ProductWrapper, ProductCard } from "./ProductStyles";
 
@@ -16,7 +17,7 @@ const ProductsResult = () => {
    const { product } = useSelector(mapState);
 
    useEffect(() => {
-      dispatch(fetchProductsStart({filterType}));
+      dispatch(fetchProductsStart({ filterType }));
    }, [filterType]);
 
    const handleFilter = (e) => {
@@ -54,14 +55,25 @@ const ProductsResult = () => {
          </Main>
       );
 
+   const handleAddToCart = (item) => {
+      if(!item) return
+      dispatch(addProduct(item))
+   }
+
    return (
       <Main>
          <h1>Products</h1>
          <FormSelect {...configFilter} />
          <ProductWrapper>
             {product.map((item, index) => {
-               const { productThumbnail, productName, productPrice } = item;
+               const {
+                  documentID,
+                  productThumbnail,
+                  productName,
+                  productPrice,
+               } = item;
                if (
+                  !documentID ||
                   !productThumbnail ||
                   !productName ||
                   typeof productPrice === "undefined"
@@ -70,12 +82,16 @@ const ProductsResult = () => {
 
                return (
                   <ProductCard key={index}>
-                     <img src={productThumbnail} alt={productName} />
-                     <h3>{productName}</h3>
+                     <Link to={`/product/${documentID}`}>
+                        <img src={productThumbnail} alt={productName} />
+                     </Link>
+                     <Link to={`/product/${documentID}`}>
+                        <h3>{productName}</h3>
+                     </Link>
                      <p>
                         <span id="naira">N</span> {productPrice}
                      </p>
-                     <button>Add To Cart</button>
+                     <button onClick={()=>handleAddToCart(item)} >Add To Cart</button>
                   </ProductCard>
                );
             })}

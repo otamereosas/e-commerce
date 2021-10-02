@@ -95,13 +95,17 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
   }
   .modal{
-    width: 50%;
+    width: 60%;
     margin: auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 0.2px 2px gray;
     padding: 2rem;
     min-width: 300px;
+
+    button{
+      margin-top: 1rem;
+    }
   }
   table{
     width: 100%;

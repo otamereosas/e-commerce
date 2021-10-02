@@ -3,13 +3,16 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Nav, NavLinks } from "./NavbarStyles";
 import { signInWithGoogle, signOutFromGoogle } from "../firebase/utils";
+import { selectCartItemsCount } from "../../redux/Cart/CartSelector";
 import search from '../../assets/search.png'
+import cart from '../../assets/cart.png'
 
 const Navbar = () => {
-   const mapState = ({ user }) => ({
-      currentUser: user.currentUser,
+   const mapState = (state) => ({
+      currentUser: state.user.currentUser,
+      totalNumCartItems : selectCartItemsCount(state) 
    });
-   const { currentUser } = useSelector(mapState);
+   const { currentUser, totalNumCartItems } = useSelector(mapState);
 
    return (
       <Nav>
@@ -37,6 +40,9 @@ const Navbar = () => {
                   Login
                </p>
             )}
+            <Link>
+               <img src={cart} alt="cart"/><span>{totalNumCartItems}</span>
+            </Link>
          </NavLinks>
       </Nav>
    );

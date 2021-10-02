@@ -32,16 +32,22 @@ export const NavLinks = styled.div`
   transform: translateY(10px);
 
   .lastChild{
-    padding-left: 3rem;
+    margin-left: 3rem;
   }
-
+  
   p{
     color: black;
     font-weight: 500;
     cursor: pointer;
   }
-
+  
   p:hover{
     font-weight: bolder;
   }
+  
+  img{
+    margin-left: 3rem;
+    height: 20px;
+  }
+
 `

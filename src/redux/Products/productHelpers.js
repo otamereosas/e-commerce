@@ -51,3 +51,20 @@ export const handleDeleteProduct = (documentID) => {
          });
    });
 };
+
+export const handlefetchSingleProduct = (productID) => {
+   return new Promise((resolve, reject) => {
+      firestore
+         .collection("products")
+         .doc(productID)
+         .get()
+         .then((snapshot) => {
+            if (snapshot.exists) {
+               resolve(snapshot.data());
+            }
+         })
+         .catch((err) => {
+            reject(err);
+         });
+   });
+};
