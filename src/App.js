@@ -11,6 +11,7 @@ import WithAdminAuth from "./Admin/HOC/withAdminAuth";
 import Toolbar from "./components/AdminComponents/toolbar/Toolbar";
 import ProductsPage from "./pages/Productspage";
 import ProductDetails from "./pages/ProductDetails";
+import CheckoutPage from "./pages/Checkout";
 
 function App() {   
 
@@ -57,6 +58,11 @@ function App() {
                exact
                path="/search/:filterType"
                render={() => <ProductsPage/>}
+            />
+            <Route
+               exact
+               path="/checkout"
+               render={() => <CheckoutPage/>}
             />
             <Route
                exact

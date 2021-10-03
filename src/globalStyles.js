@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
-
 const GlobalStyles = createGlobalStyle`
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
   }
 
   html, body{
@@ -125,7 +125,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     button{
-      background: red
+      background: #b00404
     }
   }
 
@@ -134,9 +134,6 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: line-through;
   }
 
-`
+`;
 
-
-
-
-export default GlobalStyles
+export default GlobalStyles;

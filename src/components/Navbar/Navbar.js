@@ -40,7 +40,7 @@ const Navbar = () => {
                   Login
                </p>
             )}
-            <Link>
+            <Link to="/checkout">
                <img src={cart} alt="cart"/><span>{totalNumCartItems}</span>
             </Link>
          </NavLinks>

@@ -25,8 +25,9 @@ export const ProductCard = styled.div`
   width: 18%;
   margin-bottom: 2rem;
   box-shadow: 0px 0.2px 2px gray;
-  padding: 1rem;
+  padding-bottom: 1rem;
   border-radius: 5px;
+  overflow: hidden;
 
   img{
     width: 100%;

@@ -1,5 +1,5 @@
 import CartTypes from "./CartTypes";
-import { handleAddToCart } from "./CartUtils";
+import { handleAddToCart, handleRemoverCartItem } from "./CartUtils";
 
 const INITIAL_STATE = {
    cartItems: [],
@@ -15,6 +15,14 @@ const cartReducer = (state = INITIAL_STATE, action) => {
               nextCartItem: action.payload
             })
          };
+         case CartTypes.REMOVE_CART_ITEM:
+            return {
+               ...state,
+               cartItems: handleRemoverCartItem({
+                  prevCartItems: state.cartItems,
+                  cartItemToRemove: action.payload
+               })
+            }
       default:
          return state;
    }
