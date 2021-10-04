@@ -11,7 +11,7 @@ import Toolbar from "./components/AdminComponents/toolbar/Toolbar";
 import ProductsPage from "./pages/Productspage";
 import ProductDetails from "./pages/ProductDetails";
 import CheckoutPage from "./pages/Checkout";
-import GlobalStyles from "./components/GlobalStyles";
+import GlobalStyles from "./GlobalStyles";
 
 function App() {
    const dispatch = useDispatch();

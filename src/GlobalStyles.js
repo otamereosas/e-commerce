@@ -5,8 +5,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-family: 'Varela Round', sans-serif;
   }
 
   html, body{
