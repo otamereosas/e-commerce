@@ -56,9 +56,9 @@ const ProductsResult = () => {
       );
 
    const handleAddToCart = (item) => {
-      if(!item) return
-      dispatch(addProduct(item))
-   }
+      if (!item) return;
+      dispatch(addProduct(item));
+   };
 
    return (
       <Main>
@@ -85,13 +85,17 @@ const ProductsResult = () => {
                      <Link to={`/product/${documentID}`}>
                         <img src={productThumbnail} alt={productName} />
                      </Link>
-                     <Link to={`/product/${documentID}`}>
-                        <h3>{productName}</h3>
-                     </Link>
-                     <p>
-                        <span id="naira">N</span> {productPrice}
-                     </p>
-                     <button onClick={()=>handleAddToCart(item)} >Add To Cart</button>
+                     <div className="content">
+                        <Link to={`/product/${documentID}`}>
+                           <h3>{productName}</h3>
+                        </Link>
+                        <p>
+                           <span id="naira">N</span> {productPrice}
+                        </p>
+                        <button onClick={() => handleAddToCart(item)}>
+                           Add To Cart
+                        </button>
+                     </div>
                   </ProductCard>
                );
             })}
