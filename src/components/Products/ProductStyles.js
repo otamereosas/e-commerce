@@ -15,6 +15,7 @@ export const Main = styled.div`
   }
   @media screen and (max-width: 799px){
     width: 100%;
+    padding: 0.5rem;
   }
 `
 export const ProductWrapper = styled.div`
