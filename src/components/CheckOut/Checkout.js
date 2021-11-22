@@ -1,16 +1,21 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCartItems } from "../../redux/Cart/CartSelector";
-import { removeCartItem, addProduct } from "../../redux/Cart/CartActions";
+import { selectCartItems, selectCartTotal } from "../../redux/Cart/CartSelector";
+import {
+   removeCartItem,
+   addProduct,
+   reduceCartItem,
+} from "../../redux/Cart/CartActions";
 import { createStructuredSelector } from "reselect";
 import { CheckoutWrapper, CartWrapper, Bottom } from "./CheckoutStyles";
 
 const mapState = createStructuredSelector({
    cartItems: selectCartItems,
+   total: selectCartTotal
 });
 
 const Checkout = () => {
-   const { cartItems } = useSelector(mapState);
+   const { cartItems, total } = useSelector(mapState);
    const dispatch = useDispatch();
 
    const handleRemoveCartItem = (documentID) => {
@@ -18,8 +23,12 @@ const Checkout = () => {
    };
 
    const handleAddProduct = (intrestedproduct) => {
-      dispatch(addProduct(intrestedproduct))
-   }
+      dispatch(addProduct(intrestedproduct));
+   };
+
+   const handleReduceCartItem = (intrestedproduct) => {
+      dispatch(reduceCartItem(intrestedproduct));
+   };
 
    return (
       <CheckoutWrapper>
@@ -31,8 +40,8 @@ const Checkout = () => {
                      <table>
                         <tbody>
                            <tr>
-                              <table>
-                                 <tr>
+                              {/* <table>
+                                 <tr> */}
                                     <th>Product</th>
                                     <th>Description</th>
                                     <th>Quantity</th>
@@ -50,9 +59,19 @@ const Checkout = () => {
                                           </td>
                                           <td>{item.productName}</td>
                                           <td className="quantity">
-                                             <span id="btn">{`<`}</span>
+                                             <span
+                                                id="btn"
+                                                onClick={() => {
+                                                   handleReduceCartItem(item);
+                                                }}
+                                             >{`<`}</span>
                                              {item.quantity}
-                                             <span id="btn2" onClick={()=>{handleAddProduct(item)}}>{`>`}</span>
+                                             <span
+                                                id="btn2"
+                                                onClick={() => {
+                                                   handleAddProduct(item);
+                                                }}
+                                             >{`>`}</span>
                                           </td>
                                           <td>{item.productPrice}</td>
                                           <td>
@@ -69,8 +88,8 @@ const Checkout = () => {
                                        </tr>
                                     );
                                  })}
-                              </table>
-                           </tr>
+                              {/* </table>
+                           </tr> */}
                         </tbody>
                      </table>
                   </tr>
@@ -78,7 +97,7 @@ const Checkout = () => {
             </table>
          </CartWrapper>
          <Bottom>
-            <h3>TOTAL: </h3>
+            <h3>TOTAL: <span id="naira">N</span> {total}</h3>
             <button>Checkout</button>
          </Bottom>
       </CheckoutWrapper>

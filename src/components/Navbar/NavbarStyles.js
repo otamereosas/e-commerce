@@ -7,6 +7,7 @@ export const Nav = styled.div`
   justify-content: space-between;
   z-index: 2;
   padding: 1.5rem 5rem ;
+  color: black;
   
   h1{
     color: black;

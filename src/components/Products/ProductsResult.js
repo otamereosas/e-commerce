@@ -18,7 +18,7 @@ const ProductsResult = () => {
 
    useEffect(() => {
       dispatch(fetchProductsStart({ filterType }));
-   }, [filterType]);
+   }, [dispatch, filterType]);
 
    const handleFilter = (e) => {
       const nextFilter = e.target.value;

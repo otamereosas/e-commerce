@@ -18,7 +18,7 @@ const ProductDetailsCard = () => {
 
    useEffect(() => {
       dispatch(fetchProduct(productID));
-   }, []);
+   }, [dispatch, productID]);
 
    const handleAddToCart = (prod) => {
       if(!prod) return

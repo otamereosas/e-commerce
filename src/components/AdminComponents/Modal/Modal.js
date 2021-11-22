@@ -10,12 +10,13 @@ import FormInput from "../../Forms/FormInput";
 import FormSelect from "../../Forms/FormSelect";
 import { CKEditor } from "ckeditor4-react";
 
-const mapState = ({ productsData }) => ({
+const mapState = ({ productsData, user }) => ({
    product: productsData.product,
+   currentUser: user.currentUser,
 });
 
 const Modal = ({ hidemodal, toggleModal }) => {
-   const { product } = useSelector(mapState);
+   const { product, currentUser } = useSelector(mapState);
    const dispatch = useDispatch();
    const [productName, setProductName] = useState("");
    const [productCategory, setProductCategory] = useState("mens");
@@ -25,7 +26,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
 
    useEffect(() => {
       dispatch(fetchProductsStart());
-   }, []);
+   }, [dispatch]);
 
    const resetForm = () => {
       setProductCategory("mens");
@@ -58,20 +59,33 @@ const Modal = ({ hidemodal, toggleModal }) => {
                <form onSubmit={handleSubmit}>
                   <h2>Add a Product</h2>
 
-                  <FormSelect
-                     label=""
-                     options={[
-                        {
-                           value: "mens",
-                           name: "Mens",
-                        },
-                        {
-                           value: "womens",
-                           name: "Womens",
-                        },
-                     ]}
-                     handleChange={(e) => setProductCategory(e.target.value)}
-                  />
+                  {currentUser.subAdmin ? (
+                     <FormSelect
+                        label=""
+                        options={[
+                           {
+                              value: "mens",
+                              name: "Mens",
+                           },
+                           {
+                              value: "womens",
+                              name: "Womens",
+                           },
+                        ]}
+                        handleChange={(e) => setProductCategory(e.target.value)}
+                     />
+                  ) : (
+                     <FormSelect
+                        label=""
+                        options={[
+                           {
+                              value: "mens",
+                              name: "Mens",
+                           },
+                        ]}
+                        handleChange={(e) => setProductCategory(e.target.value)}
+                     />
+                  )}
 
                   <FormInput
                      label="Name"
