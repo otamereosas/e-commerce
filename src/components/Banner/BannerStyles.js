@@ -4,6 +4,10 @@ export const BannerWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
+
+  @media screen and (max-width: 799px){
+    display:block;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -15,12 +19,22 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   overflow-y: hidden;
 
+  @media screen and (max-width: 799px){
+    height: 50vh;
+  }
 
   img{
     object-fit: cover;
     position: absolute;
     width: 100%;
     transform: translateY(199px);
+    
+    @media screen and (max-width: 799px){
+      transform: translateY(140px);
+      
+  }
+
+
   }
 
   p, button{

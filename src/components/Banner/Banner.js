@@ -14,9 +14,7 @@ const Banner = () => {
                   <Link to="/search/mens">men's Shop</Link>
                </button>
                <p>
-                  Eiusmod cillum Lorem quis enim eiusmod qui mollit. Duis sint
-                  deserunt minim tempor et nisi proident magna sunt sit Lorem.
-                  Duis elit laboris id elit.
+                  The one stop shop for African mens clothes.
                </p>
             </ImageWrapper>
             <ImageWrapper>
@@ -25,9 +23,7 @@ const Banner = () => {
                   <Link to="/search/womens">Women's Shop</Link>
                </button>
                <p>
-                  Ipsum cupidatat minim incididunt irure ut fugiat nisi ex
-                  laboris. Nostrud culpat deserunt tempor id officia. In eu
-                  laborum excepteur eiusmod amet laborist.
+                  Walk and look glamorous in the Ankara and African native for ladies.
                </p>
             </ImageWrapper>
          </BannerWrapper>

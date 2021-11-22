@@ -12,6 +12,7 @@ export const Nav = styled.div`
   h1{
     color: black;
     font-weight: 500;
+    font-size: clamp(14px, 5vw, 35px);
   }
 
   .home{
@@ -23,6 +24,12 @@ export const Nav = styled.div`
   .search{
     height: 30px;
     transform: translateY(5px)
+  }
+  @media screen and (max-width: 799px){
+    padding: 1rem;
+    .home{
+      min-width: 190px;
+    }
   }
 `
 
