@@ -4,17 +4,22 @@ export const BannerWrapper = styled.div`
 `;
 
 export const Top = styled.div`
-   height: 220px;
+   height: 200px;
    overflow: hidden;
    width: 95%;
    margin: -20px auto 25px;
    border-radius: 5px;
+
+   @media screen and (max-width:799px){
+      height: 150px;
+   }
 `;
 
 export const ImageWrapper = styled.div`
    img {
       object-fit: cover;
       width: 100%;
+      height: 100%;
    }
 
    button {
