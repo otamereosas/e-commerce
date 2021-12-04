@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const BannerWrapper = styled.div`
-`;
+export const BannerWrapper = styled.div``;
 
 export const Top = styled.div`
    height: 200px;
@@ -10,12 +9,13 @@ export const Top = styled.div`
    margin: -20px auto 25px;
    border-radius: 5px;
 
-   @media screen and (max-width:799px){
+   @media screen and (max-width: 799px) {
       height: 150px;
    }
 `;
 
 export const ImageWrapper = styled.div`
+   text-align: center;
    img {
       object-fit: cover;
       width: 100%;
@@ -35,10 +35,15 @@ export const Wrapper = styled.div`
    width: 95%;
    margin: auto;
 
-   h2{
+   h2 {
       font-weight: 400;
-      font-size:clamp(10px, 5vw, 18px);
+      font-size: clamp(10px, 5vw, 18px);
       padding: 0.5rem 0;
+   }
+
+   p {
+      text-align: center;
+      padding-top: 5px;
    }
 `;
 

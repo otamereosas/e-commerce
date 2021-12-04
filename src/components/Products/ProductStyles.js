@@ -1,16 +1,19 @@
 import styled from "styled-components";
 export const Main = styled.div`
-   width: 90%;
+   width: 95%;
    margin: auto;
    padding: 50px;
    text-align: center;
 
+   .slider{
+      margin: -50px auto -20px;
+   }
+
    .categories {
       border-radius: 100rem;
       font-family: "Avenir Next";
-      font-size: 1rem;
+      font-size: 13px;
       padding: 5px 1.5rem;
-      /* min-width: 120px; */
       width: 95%;
       color: black;
       box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
@@ -33,11 +36,10 @@ export const Main = styled.div`
    h1 {
       margin: 2rem;
       font-weight: 500;
+      font-size: clamp(10px, 5vw, 25px);
+
    }
 
-   h1 {
-      font-weight: 500;
-   }
    @media screen and (max-width: 799px) {
       width: 100%;
       padding: 0.5rem;

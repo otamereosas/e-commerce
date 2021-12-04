@@ -155,8 +155,8 @@ const Modal = ({ hidemodal, toggleModal }) => {
                         label=""
                         options={[
                            {
-                              value: "mens",
-                              name: "Mens",
+                              value: "Fruits",
+                              name: "Fruits",
                            },
                         ]}
                         handleChange={(e) => setProductCategory(e.target.value)}
