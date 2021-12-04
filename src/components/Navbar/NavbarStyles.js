@@ -7,11 +7,17 @@ export const NavWrapper = styled.div`
       width: 50%;
       min-width: 340px;
       max-width: 600px;
-      padding: 12px;
+      padding: 12px 1rem;
       border-radius: 20px;
       transform: translateY(-70%);
       outline: none;
       border: none;
+   }
+
+   input::placeholder{
+      font-weight: 400;
+      font-size: 13px;
+
    }
 `;
 
@@ -26,6 +32,7 @@ export const Nav = styled.div`
 
    h1 {
       color: black;
+      padding-top: 7px;
       font-weight: 500;
       font-size: clamp(10px, 5vw, 25px);
    }
@@ -52,7 +59,6 @@ export const NavLinks = styled.div`
    }
 
    p {
-      color: black;
       font-weight: 500;
       cursor: pointer;
       font-size: 13px;

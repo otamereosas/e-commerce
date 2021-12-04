@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
 
    h2{
       font-weight: 400;
-      font-size:clamp(10px, 5vw, 22px);
+      font-size:clamp(10px, 5vw, 18px);
       padding: 0.5rem 0;
    }
 `;
