@@ -50,6 +50,7 @@ export const ProductWrapper = styled.div`
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
+   padding: 0 1.3rem;
 
    @media screen and (max-width: 799px) {
       /* display: block; */
