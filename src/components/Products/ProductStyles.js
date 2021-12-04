@@ -86,6 +86,7 @@ export const ProductCard = styled.div`
       background-origin: border-box;
       background-clip: content-box, border-box;
       box-shadow: 2px 1000px 1px #fff inset;
+      outline: none;
    }
    button:hover {
       box-shadow: none;
@@ -131,6 +132,7 @@ export const ProductCard = styled.div`
          background-origin: border-box;
          background-clip: content-box, border-box;
          box-shadow: 2px 1000px 1px #fff inset;
+         outline: none;
       }
       button:hover {
          box-shadow: none;

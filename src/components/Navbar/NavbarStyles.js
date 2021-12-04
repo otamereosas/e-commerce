@@ -24,27 +24,22 @@ export const NavWrapper = styled.div`
 export const Nav = styled.div`
    width: 100%;
    background: linear-gradient(81.64deg, #ffb800 34.46%, #ff7a00 87.54%);
-   display: flex;
-   justify-content: space-between;
    z-index: 2;
-   padding: 1.5rem 5rem 4rem;
+   padding: 1.5rem 5rem 3rem;
    color: white;
-
+   
    h1 {
-      color: black;
       padding-top: 7px;
       font-weight: 500;
       font-size: clamp(10px, 5vw, 25px);
    }
-
+   
    .home {
-      display: flex;
-      min-width: 200px;
-      justify-content: space-between;
+      text-align: center;
    }
 
    @media screen and (max-width: 799px) {
-      padding: 1.5rem 1rem 4rem;
+      padding: 1.5rem 1rem 3rem;
    }
 `;
 
@@ -53,10 +48,8 @@ export const NavLinks = styled.div`
    display: flex;
    justify-content: space-between;
    transform: translateY(10px);
+   width: 100%;
 
-   .lastChild {
-      margin-left: 3rem;
-   }
 
    p {
       font-weight: 500;

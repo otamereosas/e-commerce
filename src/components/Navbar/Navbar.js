@@ -16,11 +16,6 @@ const Navbar = () => {
    return (
       <NavWrapper>
          <Nav>
-            <div className="home">
-               <Link to="/">
-                  <h1>Grocery-List</h1>
-               </Link>
-            </div>
             <NavLinks>
                {currentUser && (
                   <Link to="/dashboard">
@@ -42,6 +37,12 @@ const Navbar = () => {
                   <span>{totalNumCartItems}</span>
                </Link>
             </NavLinks>
+
+            <div className="home">
+               <Link to="/">
+                  <h1>Grocery-List</h1>
+               </Link>
+            </div>
          </Nav>
          <input type="search" placeholder="what are you looking for?" />
       </NavWrapper>
