@@ -1,24 +1,17 @@
 import styled from "styled-components";
 
 export const BannerWrapper = styled.div`
-   input {
-      width: 50%;
-      min-width: 300px;
-      max-width: 500px;
-      padding: 12px;
-      border-radius: 6px;
-      transform: translateY(-70%);
-   }
 `;
 
 export const Top = styled.div`
-   height: 200px;
+   height: 220px;
    overflow: hidden;
+   width: 95%;
+   margin: -20px auto 25px;
+   border-radius: 5px;
 `;
 
 export const ImageWrapper = styled.div`
-   width: 100%;
-
    img {
       object-fit: cover;
       width: 100%;
@@ -36,6 +29,12 @@ export const ImageWrapper = styled.div`
 export const Wrapper = styled.div`
    width: 95%;
    margin: auto;
+
+   h2{
+      font-weight: 400;
+      font-size:clamp(10px, 5vw, 22px);
+      padding: 0.5rem 0;
+   }
 `;
 
 export const CategoryWrapper = styled.div`
@@ -48,8 +47,8 @@ export const CategoryWrapper = styled.div`
    text-align: center;
    background: white;
    border-radius: 10px;
-   
-   img{
+
+   img {
       border-radius: 10px;
       width: 100%;
       object-fit: cover;
