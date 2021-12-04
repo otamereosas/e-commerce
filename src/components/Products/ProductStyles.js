@@ -5,14 +5,15 @@ export const Main = styled.div`
    padding: 50px;
    text-align: center;
 
-   .slider{
-      margin: -50px auto -20px;
+   .slider {
+      margin: -35px auto -20px;
    }
 
    .categories {
       border-radius: 100rem;
       font-family: "Avenir Next";
       font-size: 13px;
+      font-weight: 400;
       padding: 5px 1.5rem;
       width: 95%;
       color: black;
@@ -37,7 +38,6 @@ export const Main = styled.div`
       margin: 2rem;
       font-weight: 500;
       font-size: clamp(10px, 5vw, 25px);
-
    }
 
    @media screen and (max-width: 799px) {
@@ -52,7 +52,7 @@ export const ProductWrapper = styled.div`
    flex-wrap: wrap;
 
    @media screen and (max-width: 799px) {
-      display: block;
+      /* display: block; */
    }
 `;
 export const ProductCard = styled.div`
@@ -68,6 +68,28 @@ export const ProductCard = styled.div`
       height: 250px;
       object-fit: cover;
    }
+   button {
+      border-radius: 5px;
+      font-family: "Avenir Next";
+      font-size: 13px;
+      padding: 5px 1rem;
+      width: 110px;
+      color: black;
+      box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+      border: solid 1.999px transparent;
+      background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+         ),
+         linear-gradient(101deg, #ffb800, #ff7a00);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px #fff inset;
+   }
+   button:hover {
+      box-shadow: none;
+      color: white;
+   }
 
    h3 {
       font-weight: 500;
@@ -79,25 +101,46 @@ export const ProductCard = styled.div`
    }
 
    @media screen and (max-width: 799px) {
-      width: 100%;
+      width: 49%;
       display: flex;
-      height: 190px;
+      flex-direction: column;
+      margin-bottom: 7px;
+      /* height: 190px; */
 
       img {
-         height: 190px;
-         width: 150px;
+         height: 220px;
+         /* width: 150px; */
          object-fit: cover;
       }
       button {
-         height: 35px;
-         width: 120px;
+         border-radius: 5px;
+         font-family: "Avenir Next";
+         font-size: 13px;
+         padding: 5px 1rem;
+         width: 110px;
+         color: black;
+         box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+         border: solid 1.999px transparent;
+         background-image: linear-gradient(
+               rgba(255, 255, 255, 0),
+               rgba(255, 255, 255, 0)
+            ),
+            linear-gradient(101deg, #ffb800, #ff7a00);
+         background-origin: border-box;
+         background-clip: content-box, border-box;
+         box-shadow: 2px 1000px 1px #fff inset;
+      }
+      button:hover {
+         box-shadow: none;
+         color: white;
       }
       .content {
          display: flex;
          flex-direction: column;
          justify-content: center;
          text-align: start;
-         padding: 20px;
+         padding: 5px 10px 0;
+         font-size: 13px;
       }
    }
 `;

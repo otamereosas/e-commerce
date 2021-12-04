@@ -193,8 +193,7 @@ const ProductsResult = () => {
 
    return (
       <Main>
-         <div>
-            <br />
+            <div className="slider">
             <Slider {...settings}>
                {categogyList.map((items, index) => {
                   return (
