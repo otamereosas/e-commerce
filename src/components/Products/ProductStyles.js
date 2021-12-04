@@ -50,7 +50,7 @@ export const ProductWrapper = styled.div`
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
-   padding: 0 1.3rem;
+   padding: 0 0.9rem;
 
    @media screen and (max-width: 799px) {
       /* display: block; */
@@ -109,9 +109,10 @@ export const ProductCard = styled.div`
       /* height: 190px; */
 
       img {
-         height: 220px;
-         /* width: 150px; */
+         height: 190px;
+         width: 94%;
          object-fit: cover;
+         text-align: center;
       }
       button {
          border-radius: 5px;

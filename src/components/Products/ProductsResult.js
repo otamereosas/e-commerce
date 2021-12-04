@@ -167,6 +167,11 @@ const ProductsResult = () => {
          <Main>
             <div className="slider">
                <Slider {...settings}>
+                  <div>
+                     <Link to="/search/">
+                        <button className="categories">All</button>
+                     </Link>
+                  </div>
                   {categogyList.map((items, index) => {
                      return (
                         <div>
@@ -193,8 +198,13 @@ const ProductsResult = () => {
 
    return (
       <Main>
-            <div className="slider">
+         <div className="slider">
             <Slider {...settings}>
+               <div>
+                  <Link to="/search/">
+                     <button className="categories">All</button>
+                  </Link>
+               </div>
                {categogyList.map((items, index) => {
                   return (
                      <div>
