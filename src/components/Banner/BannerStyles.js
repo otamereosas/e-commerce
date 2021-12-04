@@ -1,53 +1,58 @@
 import styled from "styled-components";
 
 export const BannerWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
+   input {
+      width: 50%;
+      min-width: 300px;
+      max-width: 500px;
+      padding: 12px;
+      border-radius: 6px;
+      transform: translateY(-70%);
+   }
+`;
 
-  @media screen and (max-width: 799px){
-    display:block;
-  }
-`
+export const Top = styled.div`
+   height: 200px;
+   overflow: hidden;
+`;
 
 export const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  max-height: 100vh;
-  width: 110%;
-  justify-content: center;
-  overflow-y: hidden;
+   width: 100%;
 
-  @media screen and (max-width: 799px){
-    height: 50vh;
-  }
+   img {
+      object-fit: cover;
+      width: 100%;
+   }
 
-  img{
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-    transform: translateY(199px);
-    
-    @media screen and (max-width: 799px){
-      transform: translateY(140px);
-      
-  }
+   button {
+      z-index: 5;
+      width: 200px;
+      margin-left: 3rem;
+      font-weight: 500;
+      line-height: 1.5;
+   }
+`;
 
+export const Wrapper = styled.div`
+   width: 95%;
+   margin: auto;
+`;
 
-  }
-
-  p, button{
-    z-index: 5;
-    width: 200px;
-    margin-left: 3rem;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-  P{
-    width: 50%;
-    font-weight: bolder;
-    margin-top: 1rem;
-  }
-
-`
+export const CategoryWrapper = styled.div`
+   width: 94%;
+   height: 160px;
+   /* margin: 5px; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   background: white;
+   border-radius: 10px;
+   
+   img{
+      border-radius: 10px;
+      width: 100%;
+      object-fit: cover;
+      height: 160px;
+   }
+`;

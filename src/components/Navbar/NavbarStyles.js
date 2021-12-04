@@ -8,11 +8,12 @@ export const Nav = styled.div`
   z-index: 2;
   padding: 1.5rem 5rem ;
   color: black;
+  /* background: linear-gradient(81.64deg, #FFB800 34.46%, #FF7A00 87.54%); */
   
   h1{
     color: black;
     font-weight: 500;
-    font-size: clamp(14px, 5vw, 35px);
+    font-size: clamp(14px, 5vw, 27px);
   }
 
   .home{

@@ -19,7 +19,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
    const { product, currentUser } = useSelector(mapState);
    const dispatch = useDispatch();
    const [productName, setProductName] = useState("");
-   const [productCategory, setProductCategory] = useState("mens");
+   const [productCategory, setProductCategory] = useState("");
    const [productThumbnail, setProductThumbnail] = useState("");
    const [productPrice, setProductPrice] = useState(0);
    const [productDesc, setProductDesc] = useState("");
@@ -29,7 +29,7 @@ const Modal = ({ hidemodal, toggleModal }) => {
    }, [dispatch]);
 
    const resetForm = () => {
-      setProductCategory("mens");
+      setProductCategory("Fruits");
       setProductName("");
       setProductThumbnail("");
       setProductPrice(0);
@@ -64,12 +64,88 @@ const Modal = ({ hidemodal, toggleModal }) => {
                         label=""
                         options={[
                            {
-                              value: "mens",
-                              name: "Mens",
+                              value: "Fruits",
+                              name: "Fruits",
                            },
                            {
-                              value: "womens",
-                              name: "Womens",
+                              value: "Vegetable",
+                              name: "Vegetable",
+                           },
+                           {
+                              value: "Canned Goods",
+                              name: "Canned Goods",
+                           },
+                           {
+                              value: "Frozen Foods",
+                              name: "Frozen Foods",
+                           },
+                           {
+                              value: "Meat",
+                              name: "Meat",
+                           },
+                           {
+                              value: "Fish ands shellfish",
+                              name: "Fish ands shellfish",
+                           },
+                           {
+                              value: "Deli",
+                              name: "Deli",
+                           },
+                           {
+                              value: "Condiments and Spices",
+                              name: "Condiments and Spices",
+                           },
+                           {
+                              value: "Sauces and Oil",
+                              name: "Sauces and Oil",
+                           },
+                           {
+                              value: "Snacks",
+                              name: "Snacks",
+                           },
+                           {
+                              value: "Bread and Bakery",
+                              name: "Bread and Bakery",
+                           },
+                           {
+                              value: "Pasta and Rice",
+                              name: "Pasta and Rice",
+                           },
+                           {
+                              value: "Cereal",
+                              name: "Cereal",
+                           },
+                           {
+                              value: "Baking",
+                              name: "Baking",
+                           },
+                           {
+                              value: "Personal Care",
+                              name: "Personal Care",
+                           },
+                           {
+                              value: "Tubers",
+                              name: "Tubers",
+                           },
+                           {
+                              value: "Health Care",
+                              name: "Health Care",
+                           },
+                           {
+                              value: "Paper and Wraps",
+                              name: "Paper and Wraps",
+                           },
+                           {
+                              value: "Household Supplies",
+                              name: "Household Supplies",
+                           },
+                           {
+                              value: "Baby Items",
+                              name: "Baby Items",
+                           },
+                           {
+                              value: "Other Items",
+                              name: "Other Items",
                            },
                         ]}
                         handleChange={(e) => setProductCategory(e.target.value)}
