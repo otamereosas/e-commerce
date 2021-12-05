@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCartItems, selectCartTotal } from "../../redux/Cart/CartSelector";
+import {
+   selectCartItems,
+   selectCartTotal,
+} from "../../redux/Cart/CartSelector";
 import {
    removeCartItem,
    addProduct,
@@ -11,7 +14,7 @@ import { CheckoutWrapper, CartWrapper, Bottom } from "./CheckoutStyles";
 
 const mapState = createStructuredSelector({
    cartItems: selectCartItems,
-   total: selectCartTotal
+   total: selectCartTotal,
 });
 
 const Checkout = () => {
@@ -42,53 +45,55 @@ const Checkout = () => {
                            <tr>
                               {/* <table>
                                  <tr> */}
-                                    <th>Product</th>
-                                    <th>Description</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                    <th>Remove</th>
+                              <th>Product</th>
+                              <th>Quantity</th>
+                              <th>Price</th>
+                              <th>Remove</th>
+                           </tr>
+                           {cartItems.map((item, index) => {
+                              return (
+                                 <tr key={index}>
+                                    <td>
+                                       <div className="prod">
+                                          <img
+                                             src={item.productThumbnail}
+                                             alt={item.productName}
+                                          />
+                                          <p>{item.productName}</p>
+                                       </div>
+                                    </td>
+
+                                    <td className="quantity">
+                                       <span
+                                          id="btn"
+                                          onClick={() => {
+                                             handleReduceCartItem(item);
+                                          }}
+                                       >{`<`}</span>
+                                       {item.quantity}
+                                       <span
+                                          id="btn2"
+                                          onClick={() => {
+                                             handleAddProduct(item);
+                                          }}
+                                       >{`>`}</span>
+                                    </td>
+                                    <td>{item.productPrice}</td>
+                                    <td>
+                                       <button
+                                          onClick={() =>
+                                             handleRemoveCartItem(
+                                                item.documentID
+                                             )
+                                          }
+                                       >
+                                          remove
+                                       </button>
+                                    </td>
                                  </tr>
-                                 {cartItems.map((item, index) => {
-                                    return (
-                                       <tr key={index}>
-                                          <td>
-                                             <img
-                                                src={item.productThumbnail}
-                                                alt={item.productName}
-                                             />
-                                          </td>
-                                          <td>{item.productName}</td>
-                                          <td className="quantity">
-                                             <span
-                                                id="btn"
-                                                onClick={() => {
-                                                   handleReduceCartItem(item);
-                                                }}
-                                             >{`<`}</span>
-                                             {item.quantity}
-                                             <span
-                                                id="btn2"
-                                                onClick={() => {
-                                                   handleAddProduct(item);
-                                                }}
-                                             >{`>`}</span>
-                                          </td>
-                                          <td>{item.productPrice}</td>
-                                          <td>
-                                             <button
-                                                onClick={() =>
-                                                   handleRemoveCartItem(
-                                                      item.documentID
-                                                   )
-                                                }
-                                             >
-                                                remove
-                                             </button>
-                                          </td>
-                                       </tr>
-                                    );
-                                 })}
-                              {/* </table>
+                              );
+                           })}
+                           {/* </table>
                            </tr> */}
                         </tbody>
                      </table>
@@ -97,7 +102,9 @@ const Checkout = () => {
             </table>
          </CartWrapper>
          <Bottom>
-            <h3>TOTAL: <span id="naira">N</span> {total}</h3>
+            <h3>
+               TOTAL: <span id="naira">N</span> {total}
+            </h3>
             <button>Checkout</button>
          </Bottom>
       </CheckoutWrapper>

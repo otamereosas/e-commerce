@@ -23,8 +23,17 @@ export const Main = styled.div`
 
    select {
       border-radius: 10px;
-      border: solid 1.9px yellow;
+      border: solid 1.9px #ff7a00;
       padding: 10px;
+      font-size: 13px;
+      font-weight: 400;
+      color: gray;
+   }
+
+   option {
+      font-size: 13px;
+      font-weight: 400;
+      color: gray;
    }
 
    @media screen and (max-width: 799px) {
