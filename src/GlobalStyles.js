@@ -28,22 +28,29 @@ const GlobalStyles = createGlobalStyle`
     padding-bottom:10px;
   }
 
-  button{
-    background: black;
-    color: white;
-    text-transform: capitalize;
-    font-size: 15px;
-    padding: 10px 1rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    outline: none;
-    cursor: pointer;
-  }
-
-  button:hover{
-    background: #333;
-  }
+  button {
+      border-radius: 5px;
+      font-family: "Avenir Next";
+      font-size: 13px;
+      font-weight: 400;
+      padding: 5px 1rem;
+      color: black;
+      box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+      border: solid 1.999px transparent;
+      background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+         ),
+         linear-gradient(101deg, #ffb800, #ff7a00);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px #fff inset;
+      outline: none;
+   }
+   button:hover {
+      box-shadow: none;
+      color: white;
+   }
 
   span{
     color: red;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Main = styled.div`
    width: 95%;
-   margin: auto;
+   margin: -20px auto;
    padding: 50px;
    text-align: center;
 
@@ -11,33 +11,20 @@ export const Main = styled.div`
 
    .categories {
       border-radius: 100rem;
-      font-family: "Avenir Next";
       font-size: 13px;
-      font-weight: 400;
-      padding: 5px 1.5rem;
       width: 95%;
-      color: black;
-      box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-      border: solid 1.999px transparent;
-      background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0)
-         ),
-         linear-gradient(101deg, #ffb800, #ff7a00);
-      background-origin: border-box;
-      background-clip: content-box, border-box;
-      box-shadow: 2px 1000px 1px #fff inset;
-   }
-
-   .categories:hover {
-      box-shadow: none;
-      color: white;
    }
 
    h1 {
-      margin: 2rem;
+      margin: 1rem 0 0.1rem;
       font-weight: 500;
-      font-size: clamp(10px, 5vw, 25px);
+      font-size: clamp(10px, 5vw, 18px);
+   }
+
+   select {
+      border-radius: 10px;
+      border: solid 1.9px yellow;
+      padding: 10px;
    }
 
    @media screen and (max-width: 799px) {
@@ -50,7 +37,7 @@ export const ProductWrapper = styled.div`
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
-   padding: 0 0.9rem;
+   padding: 0 0.2rem;
 
    @media screen and (max-width: 799px) {
       /* display: block; */
@@ -70,27 +57,7 @@ export const ProductCard = styled.div`
       object-fit: cover;
    }
    button {
-      border-radius: 5px;
-      font-family: "Avenir Next";
-      font-size: 13px;
-      padding: 5px 1rem;
       width: 110px;
-      color: black;
-      box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-      border: solid 1.999px transparent;
-      background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0)
-         ),
-         linear-gradient(101deg, #ffb800, #ff7a00);
-      background-origin: border-box;
-      background-clip: content-box, border-box;
-      box-shadow: 2px 1000px 1px #fff inset;
-      outline: none;
-   }
-   button:hover {
-      box-shadow: none;
-      color: white;
    }
 
    h3 {
@@ -102,8 +69,8 @@ export const ProductCard = styled.div`
       margin: 5px;
    }
 
-   @media screen and (max-width: 799px) {
-      width: 49%;
+   @media screen and (max-width: 1025px) {
+      width: 23.5%;
       display: flex;
       flex-direction: column;
       margin-bottom: 7px;
@@ -116,28 +83,9 @@ export const ProductCard = styled.div`
          text-align: center;
       }
       button {
-         border-radius: 5px;
-         font-family: "Avenir Next";
-         font-size: 13px;
-         padding: 5px 1rem;
          width: 110px;
-         color: black;
-         box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-         border: solid 1.999px transparent;
-         background-image: linear-gradient(
-               rgba(255, 255, 255, 0),
-               rgba(255, 255, 255, 0)
-            ),
-            linear-gradient(101deg, #ffb800, #ff7a00);
-         background-origin: border-box;
-         background-clip: content-box, border-box;
-         box-shadow: 2px 1000px 1px #fff inset;
-         outline: none;
       }
-      button:hover {
-         box-shadow: none;
-         color: white;
-      }
+
       .content {
          display: flex;
          flex-direction: column;
@@ -145,6 +93,19 @@ export const ProductCard = styled.div`
          text-align: start;
          padding: 5px 10px 0;
          font-size: 13px;
+         h3 {
+            margin-left: 3px;
+         }
       }
+   }
+   @media screen and (max-width: 909px) {
+      width: 24.5%;
+   }
+
+   @media screen and (max-width: 600px) {
+      width: 32.7%;
+   }
+   @media screen and (max-width: 530px) {
+      width: 48.7%;
    }
 `;

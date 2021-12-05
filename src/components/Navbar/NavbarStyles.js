@@ -5,7 +5,7 @@ export const NavWrapper = styled.div`
 
    input {
       width: 50%;
-      min-width: 340px;
+      min-width: 310px;
       max-width: 600px;
       padding: 12px 1rem;
       border-radius: 20px;
@@ -14,10 +14,9 @@ export const NavWrapper = styled.div`
       border: none;
    }
 
-   input::placeholder{
+   input::placeholder {
       font-weight: 400;
       font-size: 13px;
-
    }
 `;
 
@@ -27,13 +26,13 @@ export const Nav = styled.div`
    z-index: 2;
    padding: 1.5rem 5rem 3rem;
    color: white;
-   
+
    h1 {
       padding-top: 7px;
       font-weight: 500;
       font-size: clamp(10px, 5vw, 25px);
    }
-   
+
    .home {
       text-align: center;
    }
@@ -50,7 +49,6 @@ export const NavLinks = styled.div`
    transform: translateY(10px);
    width: 100%;
 
-
    p {
       font-weight: 500;
       cursor: pointer;
@@ -63,6 +61,14 @@ export const NavLinks = styled.div`
 
    img {
       margin-left: 3rem;
-      height: 20px;
+      height: 18px;
+   }
+
+   span {
+      color: black;
+      background: whitesmoke;
+      padding: 0px 5px;
+      border-radius: 3px;
+      font-size: 13px;
    }
 `;
