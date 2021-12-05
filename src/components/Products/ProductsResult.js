@@ -10,7 +10,7 @@ import { fetchProductsStart } from "../../redux/Products/productsAction";
 import { addProduct } from "../../redux/Cart/CartActions";
 import FormSelect from "../Forms/FormSelect";
 import { Main, ProductWrapper, ProductCard } from "./ProductStyles";
-import { categogyList } from "../data/categories";
+// import { categogyList } from "../data/categories";
 
 const mapState = ({ productsData }) => ({
    product: productsData.product,
@@ -22,39 +22,39 @@ const ProductsResult = () => {
    const { filterType } = useParams();
    const { product } = useSelector(mapState);
 
-   const settings = {
-      infinite: false,
-      speed: 500,
-      slidesToShow: 7,
-      slidesToScroll: 3,
-      initialSlide: 0,
-      responsive: [
-         {
-            breakpoint: 1024,
-            settings: {
-               slidesToShow: 6,
-               slidesToScroll: 3,
-               infinite: true,
-               dots: true,
-            },
-         },
-         {
-            breakpoint: 600,
-            settings: {
-               slidesToShow: 4,
-               slidesToScroll: 2,
-               initialSlide: 0,
-            },
-         },
-         {
-            breakpoint: 480,
-            settings: {
-               slidesToShow: 3,
-               slidesToScroll: 2,
-            },
-         },
-      ],
-   };
+   // const settings = {
+   //    infinite: false,
+   //    speed: 500,
+   //    slidesToShow: 7,
+   //    slidesToScroll: 3,
+   //    initialSlide: 0,
+   //    responsive: [
+   //       {
+   //          breakpoint: 1024,
+   //          settings: {
+   //             slidesToShow: 6,
+   //             slidesToScroll: 3,
+   //             infinite: true,
+   //             dots: true,
+   //          },
+   //       },
+   //       {
+   //          breakpoint: 600,
+   //          settings: {
+   //             slidesToShow: 4,
+   //             slidesToScroll: 2,
+   //             initialSlide: 0,
+   //          },
+   //       },
+   //       {
+   //          breakpoint: 480,
+   //          settings: {
+   //             slidesToShow: 3,
+   //             slidesToScroll: 2,
+   //          },
+   //       },
+   //    ],
+   // };
 
    useEffect(() => {
       dispatch(fetchProductsStart({ filterType }));
