@@ -37,11 +37,17 @@ const GlobalStyles = createGlobalStyle`
       color: black;
       box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
       border: solid 1.999px transparent;
-      background-image: linear-gradient(
+      /* background-image: linear-gradient(
             rgba(255, 255, 255, 0),
             rgba(255, 255, 255, 0)
          ),
          linear-gradient(101deg, #ffb800, #ff7a00);
+         background-image: linear-gradient(81.64deg, Rgba(6, 148, 42, 0.4) 34.46%, Rgba(6, 148, 42, 0.6) 87.54%); */
+         background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+         ),
+         linear-gradient(101deg, Rgba(6, 148, 42, 0.4), Rgba(6, 148, 42, 0.6));
       background-origin: border-box;
       background-clip: content-box, border-box;
       box-shadow: 2px 1000px 1px #fff inset;

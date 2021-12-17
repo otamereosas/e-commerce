@@ -1,18 +1,19 @@
 import styled from "styled-components";
 export const Main = styled.div`
    width: 95%;
-   margin: -20px auto;
+   margin: -20px auto 0;
    padding: 50px;
    text-align: center;
 
    .slider {
-      margin: -35px auto -20px;
+      margin: -10px auto 10px;
    }
 
    .categories {
       border-radius: 100rem;
       font-size: 13px;
-      width: 95%;
+      min-width: 95%;
+      max-width: 200px;
    }
 
    h1 {

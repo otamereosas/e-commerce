@@ -15,6 +15,12 @@ export const FooterWrapper = styled.div`
         color: #191A19;
         box-shadow: 0.2px 0.3px 4px 0.2px grey;
 
+        p{
+            font-size: 13.2px;
+            padding: 0;
+            margin:-3px 0 0 0;
+        }
+
         span{
             font-size: 25px;
         }

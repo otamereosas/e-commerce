@@ -48,7 +48,7 @@ export const categogyList = [
 {
   image: shellfish1,
   link: "/search/Fish ands shellfish",
-  name: "Fish and shellfish",
+  name: "Fish & shellfish",
 },
 {
   image: deli,
@@ -58,12 +58,12 @@ export const categogyList = [
 {
   image: condiments,
   link: "/search/Condiments and Spices",
-  name: "Condiments and Spices",
+  name: "Spices",
 },
 {
   image: oil,
   link: "/search/Sauces and Oil",
-  name: "Sauces and Oil",
+  name: "Sauces & Oil",
 },
 {
   image: snacks,
@@ -73,12 +73,12 @@ export const categogyList = [
 {
   image: fruits,
   link: "/search/Bread and Bakery",
-  name: "Bread and Bakery",
+  name: "Bread & Bakery",
 },
 {
   image: rice,
   link: "/search/Pasta and Rice",
-  name: "Pasta and Rice",
+  name: "Pasta & Rice",
 },
 {
   image: cereal,
@@ -108,12 +108,12 @@ export const categogyList = [
 {
   image: paper,
   link: "/search/Paper and Wraps",
-  name: "Paper and Wraps",
+  name: "Paper & Wraps",
 },
 {
   image: houseHold,
   link: "/search/Household",
-  name: "Household Supplies",
+  name: "Household",
 },
 {
   image: baby,

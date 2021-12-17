@@ -6,7 +6,7 @@ export const Top = styled.div`
    height: 200px;
    overflow: hidden;
    width: 95%;
-   margin: -20px auto 25px;
+   margin: -25px auto 25px;
    border-radius: 5px;
 
    @media screen and (max-width: 799px) {
@@ -33,29 +33,29 @@ export const ImageWrapper = styled.div`
 
 export const Wrapper = styled.div`
    width: 95%;
-   margin: auto;
+   margin: -20px auto 0;
 
    h2 {
       font-weight: 400;
       font-size: clamp(10px, 5vw, 18px);
       padding: 0.5rem 0;
+      color: rgb(10 132 103)
    }
 
    p {
       text-align: center;
       padding-top: 5px;
+      font-size: 13.3px;
    }
 `;
 
 export const CategoryWrapper = styled.div`
    width: 94%;
    height: 160px;
-   /* margin: 5px; */
    display: flex;
    flex-direction: column;
    justify-content: center;
    text-align: center;
-   background: red;
    border-radius: 10px;
 
    img {

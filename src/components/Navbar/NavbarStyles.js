@@ -24,12 +24,13 @@ export const NavWrapper = styled.div`
 
 export const Nav = styled.div`
    width: 100%;
-   background: Rgba(6, 148, 42, 0.2);
+   /* background: Rgba(6, 148, 42, 0.2); */
+   /* background: rgb(10 132 83); */
    /* background: Rgba(6, 148, 142, 0.6); */
-   /* background: linear-gradient(81.64deg, Rgba(6, 148, 42, 0.4) 34.46%, Rgba(6, 148, 42, 0.6) 87.54%); */
+   background: linear-gradient(81.64deg, Rgba(6, 148, 42, 0.4) 34.46%, Rgba(6, 148, 42, 0.6) 87.54%);
    z-index: 2;
    padding: 1.5rem 5rem 3rem;
-   /* color: white; */
+   color: white;
 
    h1 {
       padding-top: 7px;
