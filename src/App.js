@@ -12,6 +12,7 @@ import ProductsPage from "./pages/Productspage";
 import ProductDetails from "./pages/ProductDetails";
 import CheckoutPage from "./pages/Checkout";
 import GlobalStyles from "./GlobalStyles";
+import Category from "./pages/Category";
 
 function App() {
    const dispatch = useDispatch();
@@ -46,6 +47,7 @@ function App() {
          <Switch>
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/dashboard" render={() => <Dashboard />} />
+            <Route exact path="/category" render={() => <Category />} />
             <Route exact path="/search" render={() => <ProductsPage />} />
             <Route
                exact

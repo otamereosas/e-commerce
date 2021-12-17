@@ -53,7 +53,6 @@ const GlobalStyles = createGlobalStyle`
    }
 
   span{
-    color: red;
     font-weight: bolder;
   }
 

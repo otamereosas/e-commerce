@@ -1,22 +1,22 @@
-import fruits from "../../assets/fruits.jpg";
-import veg from "../../assets/veg.jpg";
-import canned from "../../assets/canned.jpg";
-import frozen from "../../assets/frozen.jpg";
-import meat from "../../assets/meat.jpg";
-import fishes from "../../assets/fishes.jpg";
-import spices from "../../assets/spices.jpg";
-import oil from "../../assets/oil.jpg";
-import snacks from "../../assets/snacks.jpg";
-// import bread from "../../assets/bread.jpg";
-import rice from "../../assets/rice.jpg";
-import cereal from "../../assets/cereal.jpg";
-import bakings from "../../assets/bakings.jpg";
-import personal from "../../assets/personal.jpg";
-// import tubers from "../../assets/tubers.jpg";
+import fruits from "../../assets/fruit.png";
+import vegetable from "../../assets/vegetable.png";
+import canned from "../../assets/canned.png";
+import oil from "../../assets/oil.png";
+import meat from "../../assets/meat.png";
+import shellfish1 from "../../assets/shellfish1.png";
+import condiments from "../../assets/condiments.png";
+import deli from "../../assets/deli.png";
+import snacks from "../../assets/snacks.png";
+import seaFood from "../../assets/seaFood.png";
+import rice from "../../assets/rice.png";
+import cereal from "../../assets/cereal.png";
+import baking from "../../assets/baking.png";
+import personal from "../../assets/personalCare.png";
+import houseHold from "../../assets/houseHold.png";
 import health from "../../assets/health.jpg";
-import tissues from "../../assets/tissues.jpg";
-// import Household from "../../assets/Household.jpg";
-// import babies from "../../assets/babies.jpg";
+import paper from "../../assets/paper.png";
+import tubers from "../../assets/tubers.png";
+import baby from "../../assets/baby.png";
 import others from "../../assets/others.jpg";
 
 export const categogyList = [
@@ -26,7 +26,7 @@ export const categogyList = [
       name: "Fruits",
    },
    {
-    image: veg,
+    image: vegetable,
     link: "/search/Vegetable",
     name: "Vegetable",
  },
@@ -36,9 +36,9 @@ export const categogyList = [
   name: "Canned Goods",
 },
 {
-  image: frozen,
-  link: "/search/Frozen Foods",
-  name: "Frozen Foods",
+  image: seaFood,
+  link: "/search/Sea Food",
+  name: "Sea Food",
 },
 {
   image: meat,
@@ -46,17 +46,17 @@ export const categogyList = [
   name: "Meat",
 },
 {
-  image: fishes,
+  image: shellfish1,
   link: "/search/Fish ands shellfish",
   name: "Fish and shellfish",
 },
 {
-  image: fruits,
+  image: deli,
   link: "/search/Deli",
   name: "Deli",
 },
 {
-  image: spices,
+  image: condiments,
   link: "/search/Condiments and Spices",
   name: "Condiments and Spices",
 },
@@ -86,8 +86,8 @@ export const categogyList = [
   name: "Cereal",
 },
 {
-  image: bakings,
-  link: "/search/Baking",
+  image: baking,
+  link: "/search/Baking1",
   name: "Baking",
 },
 {
@@ -96,7 +96,7 @@ export const categogyList = [
   name: "Personal Care",
 },
 {
-  image: fruits,
+  image: tubers,
   link: "/search/Tubers",
   name: "Tubers",
 },
@@ -106,17 +106,17 @@ export const categogyList = [
   name: "Health Care",
 },
 {
-  image: tissues,
+  image: paper,
   link: "/search/Paper and Wraps",
   name: "Paper and Wraps",
 },
 {
-  image: fruits,
-  link: "/search/Household Supplies",
+  image: houseHold,
+  link: "/search/Household",
   name: "Household Supplies",
 },
 {
-  image: fruits,
+  image: baby,
   link: "/search/Baby Items",
   name: "Baby Items",
 },

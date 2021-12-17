@@ -86,9 +86,9 @@ export const ProductCard = styled.div`
       /* height: 190px; */
 
       img {
-         height: 190px;
-         width: 94%;
-         object-fit: cover;
+         /* height: 190px; */
+         /* width: 94%; */
+         /* object-fit: cover; */
          text-align: center;
       }
       button {
@@ -118,3 +118,21 @@ export const ProductCard = styled.div`
       width: 48.7%;
    }
 `;
+
+
+export const CategoryWrapper = styled.div`
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 7px;
+   margin: 10px;
+   text-align: center;
+
+   img{
+      width: 100%;
+      border-radius: 10px;
+   }
+
+   p{
+      font-size: 13px;
+   }
+`

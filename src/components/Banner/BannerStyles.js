@@ -55,7 +55,7 @@ export const CategoryWrapper = styled.div`
    flex-direction: column;
    justify-content: center;
    text-align: center;
-   background: white;
+   background: red;
    border-radius: 10px;
 
    img {
