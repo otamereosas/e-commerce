@@ -13,7 +13,8 @@ import cereal from "../../assets/cereal.png";
 import baking from "../../assets/baking.png";
 import personal from "../../assets/personalCare.png";
 import houseHold from "../../assets/houseHold.png";
-import health from "../../assets/health.jpg";
+import health from "../../assets/health.png";
+import bakery from "../../assets/bakery.png";
 import paper from "../../assets/paper.png";
 import tubers from "../../assets/tubers.png";
 import baby from "../../assets/baby.png";
@@ -71,7 +72,7 @@ export const categogyList = [
   name: "Snacks",
 },
 {
-  image: fruits,
+  image: bakery,
   link: "/search/Bread and Bakery",
   name: "Bread & Bakery",
 },

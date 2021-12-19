@@ -20,15 +20,16 @@ const Footer = () => {
                  <p>Category</p>
             </div>
             </Link>
-            <Link to="/checkout">
-            <div>
-                <span><CgShoppingCart/></span>
-                  <p>Cart</p>
-            </div>
-            </Link>
             <div>
                 <span><VscAccount/></span>
                  <p>Account</p>
+            </div>
+            <div>
+            <Link to="/checkout">
+            <div className="cart">
+                <h1><CgShoppingCart/></h1>
+            </div>
+            </Link>
             </div>
 
         </FooterWrapper>

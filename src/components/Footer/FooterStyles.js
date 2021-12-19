@@ -41,6 +41,18 @@ export const FooterWrapper = styled.div`
         span:focus, span:active , div:active, div:focus{
             color: Rgba(6, 148, 42);
         }
+
+        .cart{
+            background: linear-gradient(81.64deg, Rgb(6, 170, 20) 34.46%, Rgb(6, 80, 10) 87.54%);
+            border-radius: 1.75rem 0 0 1.75rem;
+            transform: translate(5%, -50%);
+            width: 9rem;
+            height: 3rem;
+            color: #fff;
+            font-size: 20px;
+            text-align: right;
+        }
+        
     }
 
 
